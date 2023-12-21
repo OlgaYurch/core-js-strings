@@ -25,7 +25,7 @@ function getStringLength(value) {
 }
 
 /**
- * Returns true if the value is a string, otherwise returns false.
+ * ----- Returns true if the value is a string, otherwise returns false.
  *
  * @param {string} value - The value to check if it's a string.
  * @return {boolean} - True if the value is a string, false otherwise.
@@ -40,10 +40,15 @@ function getStringLength(value) {
  */
 function isString(/* value */) {
   throw new Error('Not implemented');
+  /* if (typeof value === 'string') {
+    return true;
+  }
+  return false;
+  // Все функции-конструкторы, созданные с помощью 'new', будут иметь тип 'object' */
 }
 
 /**
- * Returns the result of concatenation of two strings.
+ * ++ Returns the result of concatenation of two strings.
  *
  * @param {string} value1 - The first string to concatenate.
  * @param {string} value2 - The second string to concatenate.
@@ -54,8 +59,8 @@ function isString(/* value */) {
  *   concatenateStrings('aa', '') => 'aa'.
  *   concatenateStrings('', 'bb') => 'bb'
  */
-function concatenateStrings(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function concatenateStrings(value1, value2) {
+  return value1.concat(value2);
 }
 
 /**
