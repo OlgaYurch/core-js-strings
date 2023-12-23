@@ -208,7 +208,7 @@ function startsWith(str, substr) {
 }
 
 /**
- * Checks if a string ends with a specific substring.
+ * ++ Checks if a string ends with a specific substring.
  *
  * @param {string} str - The input string.
  * @param {string} substr - The substring to check.
@@ -218,8 +218,8 @@ function startsWith(str, substr) {
  *   endsWith('Hello World', 'World') => true
  *   endsWith('Hello World', 'Hello') => false
  */
-function endsWith(/* str, substr */) {
-  throw new Error('Not implemented');
+function endsWith(str, substr) {
+  return str.endsWith(substr);
 }
 
 /**
