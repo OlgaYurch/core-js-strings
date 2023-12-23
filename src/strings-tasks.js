@@ -36,7 +36,7 @@ function getStringLength(value) {
  *   isString([]) => false
  *   isString({}) => false
  *   isString('test') => true
- *   isString(new String('test')) => true
+ *   isString(new String('test')) => true   !!! не срабатывает верно, найти решение
  */
 function isString(/* value */) {
   throw new Error('Not implemented');
@@ -79,7 +79,7 @@ function getFirstChar(value) {
 }
 
 /**
- * Removes leading and trailing whitespace characters from the string.
+ * ++ Removes leading and trailing whitespace characters from the string.
  *
  * @param {string} value - The input string to remove leading and trailing whitespaces from.
  * @return {string} - The string with leading and trailing whitespaces removed.
@@ -89,8 +89,8 @@ function getFirstChar(value) {
  *   removeLeadingAndTrailingWhitespaces('cat ') => 'cat'
  *   removeLeadingAndTrailingWhitespaces('\t\t\tHello, World! ') => 'Hello, World!'
  */
-function removeLeadingAndTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+function removeLeadingAndTrailingWhitespaces(value) {
+  return value.trim();
 }
 
 /**
