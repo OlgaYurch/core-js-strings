@@ -391,7 +391,7 @@ function reverseWords(str) {
 }
 
 /**
- * Inverts the case of each character in the given string.
+ * ----- Inverts the case of each character in the given string.
  *
  * @param {string} str - The input string.
  * @returns {string} - The string with the case of each character inverted.
@@ -423,7 +423,7 @@ function getStringFromTemplate(firstName, lastName) {
 }
 
 /**
- * Extracts a name from template string 'Hello, First_Name Last_Name!'.
+ * ++ Extracts a name from template string 'Hello, First_Name Last_Name!'.
  *
  * @param {string} value - The input value.
  * @return {string} - The name extracted from the template.
@@ -432,8 +432,8 @@ function getStringFromTemplate(firstName, lastName) {
  *   extractNameFromTemplate('Hello, John Doe!') => 'John Doe'
  *   extractNameFromTemplate('Hello, Chuck Norris!') => 'Chuck Norris'
  */
-function extractNameFromTemplate(/* value */) {
-  throw new Error('Not implemented');
+function extractNameFromTemplate(value) {
+  return value.slice(7, value.length - 1);
 }
 
 /**
