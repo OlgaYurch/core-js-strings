@@ -223,7 +223,7 @@ function endsWith(str, substr) {
 }
 
 /**
- * Returns a time string in the "mm:ss" format.
+ * ----- Returns a time string in the "mm:ss" format.
  *
  * @param {number} minutes - The number of minutes (non-negative integer).
  * @param {number} seconds - The number of seconds (non-negative integer).
@@ -240,7 +240,7 @@ function formatTime(/* minutes, seconds */) {
 }
 
 /**
- * Returns a string in reverse order.
+ * ++ Returns a string in reverse order.
  *
  * @param {string} str - The input string.
  * @return {string} - The string in reverse order.
@@ -249,8 +249,8 @@ function formatTime(/* minutes, seconds */) {
  *   reverseString('abcdef') => 'fedcba'
  *   reverseString('12345') => '54321'
  */
-function reverseString(/* str */) {
-  throw new Error('Not implemented');
+function reverseString(str) {
+  return str.split('').reverse().join('');
 }
 
 /**
