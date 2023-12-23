@@ -144,7 +144,7 @@ function repeatString(str, times) {
 }
 
 /**
- * Remove the first occurrence of a substring from a string.
+ * ----- Remove the first occurrence of a substring from a string.
  *
  * @param {string} str - The input string.
  * @param {string} value - The substring to remove from the string.
@@ -157,10 +157,11 @@ function repeatString(str, times) {
  */
 function removeFirstOccurrences(/* str, value */) {
   throw new Error('Not implemented');
+  /* return str.replace(value, ' '); */
 }
 
 /**
- * Remove the last occurrence of a substring from a string.
+ * ----- Remove the last occurrence of a substring from a string.
  *
  * @param {string} str - The input string.
  * @param {string} value - The substring to remove from the string.
@@ -176,7 +177,7 @@ function removeLastOccurrences(/* str, value */) {
 }
 
 /**
- * Calculate the sum of character codes of the given string.
+ * ----- Calculate the sum of character codes of the given string.
  *
  * @param {string} str - The input string.
  * @return {number} - The sum of character codes of the string.
@@ -192,7 +193,7 @@ function sumOfCodes(/* str */) {
 }
 
 /**
- * Checks if a string starts with a specific substring.
+ * ++ Checks if a string starts with a specific substring.
  *
  * @param {string} str - The input string.
  * @param {string} substr - The substring to check.
@@ -202,8 +203,8 @@ function sumOfCodes(/* str */) {
  *   startsWith('Hello World', 'World') => false
  *   startsWith('Hello World', 'Hello') => true
  */
-function startsWith(/* str, substr */) {
-  throw new Error('Not implemented');
+function startsWith(str, substr) {
+  return str.startsWith(substr);
 }
 
 /**
