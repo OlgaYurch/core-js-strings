@@ -109,7 +109,7 @@ function removeLeadingWhitespaces(value) {
 }
 
 /**
- * Removes only trailing whitespace characters from the string.
+ * ++ Removes only trailing whitespace characters from the string.
  *
  * @param {string} value - The input string to remove trailing whitespaces from.
  * @return {string} - The string with trailing whitespaces removed.
@@ -124,7 +124,7 @@ function removeTrailingWhitespaces(value) {
 }
 
 /**
- * Returns a string that is repeated the specified number of times.
+ * ++ Returns a string that is repeated the specified number of times.
  *
  * @param {string} str - The string to repeat.
  * @param {number} times - The number of times to repeat the string.
@@ -136,8 +136,11 @@ function removeTrailingWhitespaces(value) {
  *   repeatString('', 3) => ''
  *   repeatString('abc', -2) => ''
  */
-function repeatString(/* str, times */) {
-  throw new Error('Not implemented');
+function repeatString(str, times) {
+  if (times > 0) {
+    return str.repeat(times);
+  }
+  return '';
 }
 
 /**
