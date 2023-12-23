@@ -437,7 +437,7 @@ function extractNameFromTemplate(value) {
 }
 
 /**
- * Remove the first and last angle brackets from tag string
+ * ++ Remove the first and last angle brackets from tag string
  *
  * @param {string} str - The input tag.
  * @return {string} - The tag without the first and last angle brackets.
@@ -447,8 +447,8 @@ function extractNameFromTemplate(value) {
  *   unbracketTag('<span>') => 'span'
  *   unbracketTag('<a>') => 'a'
  */
-function unbracketTag(/* str */) {
-  throw new Error('Not implemented');
+function unbracketTag(str) {
+  return str.slice(1, str.length - 1);
 }
 
 /**
