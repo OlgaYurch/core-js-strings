@@ -157,7 +157,7 @@ function repeatString(str, times) {
  */
 function removeFirstOccurrences(/* str, value */) {
   throw new Error('Not implemented');
-  /* return str.replace(value, ' '); */
+  /* return str.indexOf(value); */
 }
 
 /**
@@ -174,6 +174,7 @@ function removeFirstOccurrences(/* str, value */) {
  */
 function removeLastOccurrences(/* str, value */) {
   throw new Error('Not implemented');
+  /* return str.lastIndexOf(value); */
 }
 
 /**
@@ -285,7 +286,7 @@ function containsSubstring(str, substring) {
 }
 
 /**
- * Returns the number of vowels in the string.
+ * ----- Returns the number of vowels in the string.
  * Vowels: 'a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'.
  *
  * @param {string} str - The input string.
@@ -300,10 +301,32 @@ function containsSubstring(str, substring) {
  */
 function countVowels(/* str */) {
   throw new Error('Not implemented');
+  /* const vowelsArr = [
+    'a',
+    'e',
+    'i',
+    'o',
+    'u',
+    'y',
+    'A',
+    'E',
+    'I',
+    'O',
+    'U',
+    'Y',
+  ];
+  let vowelsSum = 0;
+  for (const el of str) {
+    if (vowelsArr.includes(el)) {
+      vowelsSum += 1;
+    }
+    vowelsSum += 0;
+  }
+  return vowelsSum; */
 }
 
 /**
- * Returns true if the string is a palindrome; otherwise false.
+ * ++ Returns true if the string is a palindrome; otherwise false.
  * https://en.wikipedia.org/wiki/Palindrome
  *
  * @param {string} str - The input string.
@@ -315,8 +338,19 @@ function countVowels(/* str */) {
  *   isPalindrome('apple') => false
  *   isPalindrome('No lemon, no melon') => true
  */
-function isPalindrome(/* str */) {
-  throw new Error('Not implemented');
+function isPalindrome(str) {
+  if (
+    str.toLowerCase().replace(/[^a-zа-яё]/gi, '') ===
+    str
+      .toLowerCase()
+      .replace(/[^a-zа-яё]/gi, '')
+      .split('')
+      .reverse()
+      .join('')
+  ) {
+    return true;
+  }
+  return false;
 }
 
 /**
