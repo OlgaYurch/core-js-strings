@@ -452,7 +452,7 @@ function unbracketTag(str) {
 }
 
 /**
- * Extracts e-mails from single string with e-mails list delimited by semicolons
+ * ++ Extracts e-mails from single string with e-mails list delimited by semicolons
  *
  * @param {string} str - The input string.
  * @return {array} - The list of e-mails extracted from the string.
@@ -466,8 +466,8 @@ function unbracketTag(str) {
  *   ],
  *   'info@gmail.com' => ['info@gmail.com']
  */
-function extractEmails(/* str */) {
-  throw new Error('Not implemented');
+function extractEmails(str) {
+  return str.split(/;/);
 }
 
 /**
