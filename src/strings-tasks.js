@@ -269,7 +269,7 @@ function orderAlphabetically(str) {
 }
 
 /**
- * Checks if a given string contains a specified substring.
+ * ++ Checks if a given string contains a specified substring.
  *
  * @param {string} str - The input string to search within.
  * @param {string} substring - The substring to check for in the input string.
@@ -280,8 +280,8 @@ function orderAlphabetically(str) {
  *   containsSubstring('JavaScript is Fun', 'Python') => false
  *   containsSubstring('12345', '34') => true
  */
-function containsSubstring(/* str, substring */) {
-  throw new Error('Not implemented');
+function containsSubstring(str, substring) {
+  return str.includes(substring);
 }
 
 /**
