@@ -254,7 +254,7 @@ function reverseString(str) {
 }
 
 /**
- * Returns a string with characters in alphabetical order.
+ * ++ Returns a string with characters in alphabetical order.
  *
  * @param {string} str - The input string.
  * @return {string} - The string in alphabetical order.
@@ -264,8 +264,8 @@ function reverseString(str) {
  *   orderAlphabetically('textbook') => 'bekoottx'
  *   orderAlphabetically('abc123xyz') => '123abcxyz'
  */
-function orderAlphabetically(/* str */) {
-  throw new Error('Not implemented');
+function orderAlphabetically(str) {
+  return str.split('').sort().join('');
 }
 
 /**
