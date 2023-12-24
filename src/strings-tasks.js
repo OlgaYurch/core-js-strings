@@ -25,7 +25,7 @@ function getStringLength(value) {
 }
 
 /**
- * ----- Returns true if the value is a string, otherwise returns false.
+ * ++ Returns true if the value is a string, otherwise returns false.
  *
  * @param {string} value - The value to check if it's a string.
  * @return {boolean} - True if the value is a string, false otherwise.
@@ -38,13 +38,11 @@ function getStringLength(value) {
  *   isString('test') => true
  *   isString(new String('test')) => true   !!! не срабатывает верно, найти решение
  */
-function isString(/* value */) {
-  throw new Error('Not implemented');
-  /* if (typeof value === 'string') {
+function isString(value) {
+  if (value instanceof String || typeof value === 'string') {
     return true;
   }
   return false;
-  // Все функции-конструкторы, созданные с помощью 'new', будут иметь тип 'object' */
 }
 
 /**
