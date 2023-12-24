@@ -298,7 +298,7 @@ function containsSubstring(str, substring) {
 }
 
 /**
- * ----- Returns the number of vowels in the string.
+ * ++ Returns the number of vowels in the string.
  * Vowels: 'a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'.
  *
  * @param {string} str - The input string.
@@ -311,30 +311,15 @@ function containsSubstring(str, substring) {
  *   countVowels('aEiOu') => 5
  *   countVowels('XYZ') => 1
  */
-function countVowels(/* str */) {
-  throw new Error('Not implemented');
-  /* const vowelsArr = [
-    'a',
-    'e',
-    'i',
-    'o',
-    'u',
-    'y',
-    'A',
-    'E',
-    'I',
-    'O',
-    'U',
-    'Y',
-  ];
+function countVowels(str) {
+  const vowels = 'aAeEiIoOuUyY';
   let vowelsSum = 0;
-  for (const el of str) {
-    if (vowelsArr.includes(el)) {
+  for (let i = 0; i < str.length; i += 1) {
+    if (vowels.indexOf(str[i]) !== -1) {
       vowelsSum += 1;
     }
-    vowelsSum += 0;
   }
-  return vowelsSum; */
+  return vowelsSum;
 }
 
 /**
