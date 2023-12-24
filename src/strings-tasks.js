@@ -476,7 +476,7 @@ function extractEmails(str) {
 }
 
 /**
- * Encode specified string with ROT13 cipher
+ * ----- Encode specified string with ROT13 cipher
  * See details:  https://en.wikipedia.org/wiki/ROT13
  *
  * @param {string} str - The input string.
@@ -493,10 +493,19 @@ function extractEmails(str) {
  */
 function encodeToRot13(/* str */) {
   throw new Error('Not implemented');
+  /* const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const rot13 = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+  let newStr = '';
+  for (let i = 0; i < str.length; i += 1) {
+    for (let j = 0; j < rot13.length; j += 1) {
+      newStr += str[i].replace(alphabet[j], rot13[j]);
+    }
+  }
+  return newStr; */
 }
 
 /**
- * Returns playid card id.
+ * ----- Returns playid card id.
  *
  * Playing cards initial deck includes the cards in the following order:
  *
