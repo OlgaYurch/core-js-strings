@@ -142,7 +142,7 @@ function repeatString(str, times) {
 }
 
 /**
- * ----- Remove the first occurrence of a substring from a string.
+ * ++ Remove the first occurrence of a substring from a string.
  *
  * @param {string} str - The input string.
  * @param {string} value - The substring to remove from the string.
@@ -153,9 +153,11 @@ function repeatString(str, times) {
  *   removeFirstOccurrences('I like legends', 'end') => 'I like legs'.
  *   removeFirstOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
-function removeFirstOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
-  /* return str.indexOf(value); */
+function removeFirstOccurrences(str, value) {
+  if (str.indexOf(value) !== -1) {
+    return str.replace(value, '');
+  }
+  return str;
 }
 
 /**
