@@ -196,6 +196,11 @@ function removeLastOccurrences(str, value) {
  */
 function sumOfCodes(/* str */) {
   throw new Error('Not implemented');
+  /* let sum = 0;
+  for (let i = 0; i < str.length; i += 1) {
+    sum += str.charCodeAt(i);
+  }
+  return sum; */ /* добавить проверку на пустоту, не проходит только этот тест */
 }
 
 /**
@@ -229,7 +234,7 @@ function endsWith(str, substr) {
 }
 
 /**
- * ----- Returns a time string in the "mm:ss" format.
+ * ++ Returns a time string in the "mm:ss" format.
  *
  * @param {number} minutes - The number of minutes (non-negative integer).
  * @param {number} seconds - The number of seconds (non-negative integer).
@@ -241,8 +246,10 @@ function endsWith(str, substr) {
  *   formatTime(0, 45) => "00:45"
  *   formatTime(0, 0) => "00:00"
  */
-function formatTime(/* minutes, seconds */) {
-  throw new Error('Not implemented');
+function formatTime(minutes, seconds) {
+  return `${minutes.toString().padStart(2, '0')}:${seconds
+    .toString()
+    .padStart(2, '0')}`;
 }
 
 /**
