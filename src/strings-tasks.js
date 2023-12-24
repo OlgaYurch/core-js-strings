@@ -161,7 +161,7 @@ function removeFirstOccurrences(str, value) {
 }
 
 /**
- * ----- Remove the last occurrence of a substring from a string.
+ * ++ Remove the last occurrence of a substring from a string.
  *
  * @param {string} str - The input string.
  * @param {string} value - The substring to remove from the string.
@@ -172,9 +172,14 @@ function removeFirstOccurrences(str, value) {
  *   removeLastOccurrences('I like legends', 'end') => 'I like legs'.
  *   removeLastOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
-function removeLastOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
-  /* return str.lastIndexOf(value); */
+function removeLastOccurrences(str, value) {
+  if (str.lastIndexOf(value) !== -1) {
+    return (
+      str.substring(0, str.lastIndexOf(value)) +
+      str.substring(str.lastIndexOf(value) + value.length, str.length)
+    );
+  }
+  return str;
 }
 
 /**
