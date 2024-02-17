@@ -478,7 +478,7 @@ function extractEmails(str) {
 }
 
 /**
- * ----- Encode specified string with ROT13 cipher
+ * ++ Encode specified string with ROT13 cipher
  * See details:  https://en.wikipedia.org/wiki/ROT13
  *
  * @param {string} str - The input string.
@@ -493,28 +493,28 @@ function extractEmails(str) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(/* str */) {
-  throw new Error('Not implemented');
-  // return str.replace(/[a-zA-Z]/g, (letter) => {
-  //   const charCode = letter.charCodeAt(0);
-  //   if (
-  //     (charCode >= 97 && charCode <= 109) ||
-  //     (charCode >= 65 && charCode <= 77)
-  //   ) {
-  //     return String.fromCharCode(charCode + 13);
-  //   }
-  //   if (
-  //     (charCode >= 110 && charCode <= 122) ||
-  //     (charCode >= 78 && charCode <= 90)
-  //   ) {
-  //     return String.fromCharCode(charCode - 13);
-  //   }
-  // });
-  // переписать, чтобы return  был в конце, иначе выдает error
+function encodeToRot13(str) {
+  const newStr = str.replace(/[a-zA-Z]/g, (letter) => {
+    const charCode = letter.charCodeAt(0);
+    if (
+      (charCode >= 97 && charCode <= 109) ||
+      (charCode >= 65 && charCode <= 77)
+    ) {
+      return String.fromCharCode(charCode + 13);
+    }
+    if (
+      (charCode >= 110 && charCode <= 122) ||
+      (charCode >= 78 && charCode <= 90)
+    ) {
+      return String.fromCharCode(charCode - 13);
+    }
+    return newStr;
+  });
+  return newStr;
 }
 
 /**
- * Returns playid card id.
+ * ++ Returns playid card id.
  *
  * Playing cards initial deck includes the cards in the following order:
  *
