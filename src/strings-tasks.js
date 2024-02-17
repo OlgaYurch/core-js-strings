@@ -183,7 +183,7 @@ function removeLastOccurrences(str, value) {
 }
 
 /**
- * ----- Calculate the sum of character codes of the given string.
+ * ++ Calculate the sum of character codes of the given string.
  *
  * @param {string} str - The input string.
  * @return {number} - The sum of character codes of the string.
@@ -194,13 +194,15 @@ function removeLastOccurrences(str, value) {
  *   sumOfCodes('') => 0
  *   sumOfCodes() => 0
  */
-function sumOfCodes(/* str */) {
-  throw new Error('Not implemented');
-  /* let sum = 0;
+function sumOfCodes(str) {
+  let sum = 0;
+  if (str == null) {
+    return 0;
+  }
   for (let i = 0; i < str.length; i += 1) {
     sum += str.charCodeAt(i);
   }
-  return sum; */ /* добавить проверку на пустоту, не проходит только этот тест */
+  return sum;
 }
 
 /**
@@ -493,15 +495,22 @@ function extractEmails(str) {
  */
 function encodeToRot13(/* str */) {
   throw new Error('Not implemented');
-  /* const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  const rot13 = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
-  let newStr = '';
-  for (let i = 0; i < str.length; i += 1) {
-    for (let j = 0; j < rot13.length; j += 1) {
-      newStr += str[i].replace(alphabet[j], rot13[j]);
-    }
-  }
-  return newStr; */
+  // return str.replace(/[a-zA-Z]/g, (letter) => {
+  //   const charCode = letter.charCodeAt(0);
+  //   if (
+  //     (charCode >= 97 && charCode <= 109) ||
+  //     (charCode >= 65 && charCode <= 77)
+  //   ) {
+  //     return String.fromCharCode(charCode + 13);
+  //   }
+  //   if (
+  //     (charCode >= 110 && charCode <= 122) ||
+  //     (charCode >= 78 && charCode <= 90)
+  //   ) {
+  //     return String.fromCharCode(charCode - 13);
+  //   }
+  // });
+  // переписать, чтобы return  был в конце, иначе выдает error
 }
 
 /**
